@@ -9,4 +9,3 @@
 ### :bust_in_silhouette: Brayan Ortiz
 * Twitter: [@Bryano_13](https://twitter.com/Bryano_13)
 * Github: [@bryano13](https://github.com/bryano13)
-https://twitter.com/Bryano_13
