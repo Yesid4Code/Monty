@@ -44,5 +44,7 @@ void op_pall(stack_t **stack, unsigned int line_number);
 
 
 /* HELPER FUNCTIONS */
+void get_instruct(char *instruct, stack_t **stack, unsigned int line_number);
+
 
 #endif
