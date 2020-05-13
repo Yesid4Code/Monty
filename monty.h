@@ -45,6 +45,7 @@ void op_pall(stack_t **stack)
 
 /* HELPER FUNCTIONS */
 void get_instruct(char *instruct, stack_t **stack, unsigned int line_number);
-stack_t *add_node(stack_t **stack, const int n)
+stack_t *add_node(stack_t **stack, const int n);
+
 
 #endif

@@ -28,3 +28,24 @@ stack_t *add_node(stack_t **stack, const int n)
 	*stack = new;
 	return (new);
 }
+
+/**
+ * _isdigit - checks that a string only contains digits
+ * @num: string to check
+ *
+ * Return: 0 if only digits, else 1
+ */
+int _isdigit(char *num)
+{
+	int i;
+
+	for (i = 0; num[i]; i++)
+	{
+		if (num[i] == '-' && i == 0)
+			continue;
+		if (isdigit(num[i]) == 0)
+			return (1);
+	}
+	return (0);
+}
+
