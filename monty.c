@@ -34,10 +34,12 @@ int main(int argc, char *argv[])
 		{
 			get_instruct(instruct, &stack, index_line);
 		}
-		/*free(phrase);*/
 	}
-	free(phrase);
-	free_list(stack);
-	fclose(fp);
+	on_exit(free_phrase, &phrase);
+	/*on_exit(free_stack, &stack);*/
+	on_exit(close_file, fp);
+	/*free(phrase);*/
+	/*free_list(stack);*/
+	/*fclose(fp);*/
 	exit(EXIT_SUCCESS);
 }

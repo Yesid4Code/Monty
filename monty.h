@@ -57,4 +57,8 @@ int _isdigit(char *num);
 void free_list(stack_t *stack);
 int list_len(stack_t **stack);
 
+/*FREE FUNCTIONS*/
+void free_phrase(int status, void *arg);
+void close_file(int status, void *arg);
+
 #endif
