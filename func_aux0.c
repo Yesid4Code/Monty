@@ -65,3 +65,24 @@ void free_list(stack_t *stack)
 		tmp = aux;
 	}
 }
+
+/**
+ * len_list - number of elements in a double linked list
+ * @stack: pointer to first node
+ *
+ *Return: number of elements
+ */
+
+int list_len(stack_t **stack)
+{
+	stack_t *head;
+	int i = 0;
+
+	head = *stack;
+	while (head)
+	{
+		head = head->next;
+		i++;
+	}
+	return (i);
+}
