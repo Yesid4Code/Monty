@@ -28,5 +28,6 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 	}
 
 	dprintf(STDOUT_FILENO, "L%u: unknown instruction %s\n", index_line, instruct);
+	free(instruct);
 	exit(EXIT_FAILURE);
 }

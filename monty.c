@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
 		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	free(phrase);
 	while (getline(&phrase, &n, fp) != -1)
 	{
 		index_line++;
