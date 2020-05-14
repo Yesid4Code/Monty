@@ -60,7 +60,7 @@ void free_list(stack_t *stack)
 	while (stack)
 	{
 		tmp = stack;
-		stack = stack->next
+		stack = stack->next;
 		free(tmp);
 	}
 }
