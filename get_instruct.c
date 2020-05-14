@@ -15,6 +15,7 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 	instruction_t check_instruct[] = {
 		{"push", op_push},
 		{"pall", op_pall},
+		{"pint", op_pint},
 		{NULL, NULL}
 	};
 

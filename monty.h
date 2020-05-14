@@ -44,6 +44,7 @@ typedef struct instruction_s
 /* OPERATORS */
 void op_push(stack_t **stack, unsigned int index_line);
 void op_pall(stack_t **stack, unsigned int index_line);
+void op_pint(stack_t **stack, unsigned int index_line);
 
 /* HELPER FUNCTIONS */
 void get_instruct(char *instruct, stack_t **stack, unsigned int index_line);
