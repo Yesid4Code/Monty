@@ -48,6 +48,7 @@ void op_pint(stack_t **stack, unsigned int index_line);
 void op_pop(stack_t **stack, unsigned int index_line);
 void op_swap(stack_t **stack, unsigned int line_number);
 void op_add(stack_t **stack, unsigned int index);
+void op_nop(stack_t **stack, unsigned int index_line);
 
 /* HELPER FUNCTIONS */
 void get_instruct(char *instruct, stack_t **stack, unsigned int index_line);
