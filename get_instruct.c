@@ -16,9 +16,9 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},
+		{"pop", op_pop},
 		{NULL, NULL}
 	};
-
 	for (i = 0; check_instruct[i].opcode != NULL; i++)
 	{
 		if (strcmp(check_instruct[i].opcode, instruct) == 0)
@@ -27,8 +27,6 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 			return;
 		}
 	}
-
 	dprintf(STDOUT_FILENO, "L%u: unknown instruction %s\n", index_line, instruct);
-	free(instruct);
 	exit(EXIT_FAILURE);
 }
