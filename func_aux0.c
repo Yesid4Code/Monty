@@ -55,12 +55,13 @@ int _isdigit(char *num)
  */
 void free_list(stack_t *stack)
 {
-	stack_t *tmp;
+	stack_t *tmp, *aux;
 
-	while (stack)
+	tmp = stack;
+	while (tmp)
 	{
-		tmp = stack;
-		stack = stack->next;
+		aux = tmp->next;
 		free(tmp);
+		tmp = aux;
 	}
 }
