@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
 		}
 		/*free(phrase);*/
 	}
-	free(phrase);
-	free_list(stack);
+	free(phrase), free_list(stack);
 	fclose(fp);
 	exit(EXIT_SUCCESS);
 }
