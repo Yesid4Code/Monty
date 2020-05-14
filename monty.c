@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		op = strtok(phrase, "\n\t\r ");
 		if (op != NULL && instruct[0] != '#')
 		{
-			get_intruct(instruct, &stack, index_line);
+			get_instruct(instruct, &stack, index_line);
 		}
 	}
 	exit(EXIT_SUCCESS);
