@@ -7,16 +7,16 @@
  *
  * Return: nothing.
  */
-void op_swap(stack_t **stack, unsigned int line_number)
+void op_swap(stack_t **stack, unsigned int index_line)
 {
 	stack_t *temp;
 	int len = 0;
 
-	len = len_list(stack);
+	len = list_len(stack);
 
 	if (len < 2 || stack == NULL || *stack == NULL)
 	{
-		fprintf(stdout, "L%u: can't swap, stack too short\n", line_number);
+		fprintf(stdout, "L%u: can't swap, stack too short\n", index_line);
 		exit(EXIT_FAILURE);
 	}
 	else

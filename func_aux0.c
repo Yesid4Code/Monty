@@ -67,7 +67,7 @@ void free_list(stack_t *stack)
 }
 
 /**
- * len_list - number of elements in a double linked list
+ * list_len - number of elements in a double linked list
  * @stack: pointer to first node
  *
  *Return: number of elements
