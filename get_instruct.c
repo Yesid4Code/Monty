@@ -16,6 +16,8 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},
+
+		{"swap", op_swap},
 		{NULL, NULL}
 	};
 
