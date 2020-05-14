@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
-	unsigned int index_line = 0;
+	unsigned int index_line = 1;
 	FILE *fp = NULL;
 	char *phrase = NULL, *instruct = NULL;
 	size_t n = 0;
