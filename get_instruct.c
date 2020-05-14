@@ -11,24 +11,10 @@
 void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 {
 	size_t i;
+
 	instruction_t check_instruct[] = {
 		{"push", op_push},
 		{"pall", op_pall},
-		{"pint", op_pint},
-		{"pop", op_pop},
-		{"swap", op_swap},
-		{"add", op_add},
-		{"nop", op_nop},
-		{"sub", op_sub},
-		{"mul", op_mul},
-		{"div", op_div},
-		{"mod", op_mod},
-		{"rotl", rotl},
-		{"rotr", rotr},
-		{"stack", op_stack},
-		{"queue", op_queue},
-		{"pchar", op_pchar},
-		{"pstr", op_pstr},
 		{NULL, NULL}
 	};
 

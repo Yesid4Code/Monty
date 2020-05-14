@@ -8,7 +8,7 @@
  */
 void op_push(stack_t **stack, unsigned int index_line)
 {
-	char *num;
+	char *num = NULL;
 	int n;
 
 	num = strtok(NULL, "\n\t\r ");
@@ -23,4 +23,5 @@ void op_push(stack_t **stack, unsigned int index_line)
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
+	return;
 }

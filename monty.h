@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <unistd.h>
+#include <string.h>
 
 /* STRUCTURES */
 /**
@@ -35,16 +37,16 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int index_line);
 } instruction_t;
 
 
 /* Operators */
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pall(stack_t **stack)
+void op_push(stack_t **stack, unsigned int index_line);
+void op_pall(stack_t **stack, unsigned int index_line);
 
 /* HELPER FUNCTIONS */
-void get_instruct(char *instruct, stack_t **stack, unsigned int line_number);
+void get_instruct(char *instruct, stack_t **stack, unsigned int index_line);
 stack_t *add_node(stack_t **stack, const int n);
 int _isdigit(char *num);
 

@@ -4,6 +4,8 @@
   * main - main function
   * @argc: number of arguments
   * @argv: arguments
+  *
+  * Return: Always 0 on success
   */
 int main(int argc, char *argv[])
 {
@@ -19,22 +21,23 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	fp = fopen(argv[1], "r");
-	if (fs == NULL)
+	if (fp == NULL)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	/*on_exit(free_phrase, &phrase);*/
-	/*on_exit(free_stack, &stack);*/
-	/*on_exit(m_fs_close, fp);*/
+	free(phrase);
 	while (getline(&phrase, &n, fp) != -1)
 	{
 		index_line++;
-		op = strtok(phrase, "\n\t\r ");
-		if (op != NULL && instruct[0] != '#')
+		instruct = strtok(phrase, "\n\t\r ");
+		if (instruct != NULL && instruct[0] != '#')
 		{
 			get_instruct(instruct, &stack, index_line);
 		}
+		/*free(phrase);*/
 	}
+	/*free(phrase);*/
+	fclose(fp);
 	exit(EXIT_SUCCESS);
 }
