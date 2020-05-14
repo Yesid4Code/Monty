@@ -49,3 +49,18 @@ int _isdigit(char *num)
 	return (0);
 }
 
+/**
+ * free_list - frees node
+ * @stack: pointer to first node
+ */
+void free_list(stack_t *stack)
+{
+	stack_t *tmp;
+
+	while (stack)
+	{
+		tmp = stack;
+		stack = stack->next
+		free(tmp);
+	}
+}
