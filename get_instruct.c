@@ -22,6 +22,7 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 		{"nop", op_nop},
 		{"sub", op_sub},
 		{"div", op_div},
+		{"mul", op_mul},
 		{NULL, NULL}
 	};
 	for (i = 0; check_instruct[i].opcode != NULL; i++)

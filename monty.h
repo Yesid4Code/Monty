@@ -50,6 +50,7 @@ void op_add(stack_t **stack, unsigned int index_line);
 void op_nop(stack_t **stack, unsigned int index_line);
 void op_sub(stack_t **stack, unsigned int index_line);
 void op_div(stack_t **stack, unsigned int index);
+void op_mul(stack_t **stack, unsigned int index_line);
 
 /* HELPER FUNCTIONS */
 void get_instruct(char *instruct, stack_t **stack, unsigned int index_line);
