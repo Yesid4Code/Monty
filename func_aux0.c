@@ -50,19 +50,21 @@ int _isdigit(char *num)
 }
 
 /**
- * free_list - frees node
+ * free_stack - frees node
+ * @status: exit status
  * @stack: pointer to first node
  */
-void free_list(stack_t *stack)
+void free_stack(int status, void *stack)
 {
-	stack_t *tmp, *aux;
+	stack_t **tmp, *aux;
 
-	tmp = stack;
-	while (tmp)
+	(void)status;
+	tmp = (stack_t **)stack;
+	while (*tmp)
 	{
-		aux = tmp->next;
-		free(tmp);
-		tmp = aux;
+		aux = (*tmp)->next;
+		free(*tmp);
+		*tmp = aux;
 	}
 }
 

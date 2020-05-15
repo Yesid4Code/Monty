@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	on_exit(free_phrase, &phrase);
-	/*on_exit(free_stack, &stack);*/
+	on_exit(free_stack, &stack);
 	on_exit(close_file, fp);
 	/*free(phrase);*/
 	/*free_list(stack);*/

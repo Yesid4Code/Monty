@@ -3,13 +3,13 @@
 /**
  * free_phrase - free line pointer returned by getline
  * @status: exit status
- * @arg: pointer to phrase
+ * @phrase: pointer to phrase
  *
  * Return: void
  */
-void free_phrase(int status, void *arg)
+void free_phrase(int status, void *phrase)
 {
-	char **lineptr = arg;
+	char **lineptr = phrase;
 
 	(void)status;
 	if (*lineptr != NULL)

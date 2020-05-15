@@ -54,11 +54,11 @@ void op_nop(stack_t **stack, unsigned int index_line);
 void get_instruct(char *instruct, stack_t **stack, unsigned int index_line);
 stack_t *add_node(stack_t **stack, const int n);
 int _isdigit(char *num);
-void free_list(stack_t *stack);
 int list_len(stack_t **stack);
 
 /*FREE FUNCTIONS*/
-void free_phrase(int status, void *arg);
+void free_phrase(int status, void *stack);
+void free_stack(int status, void *stack);
 void close_file(int status, void *arg);
 
 #endif
