@@ -14,13 +14,13 @@ void op_push(stack_t **stack, unsigned int index_line)
 	num = strtok(NULL, "\n\t\r ");
 	if (num == NULL || _isdigit(num))
 	{
-		dprintf(STDOUT_FILENO, "L%u: usage: push integer\n", index_line);
+		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", index_line);
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(num);
 	if (!add_node(stack, n))
 	{
-		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 }

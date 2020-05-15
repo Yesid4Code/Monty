@@ -30,6 +30,6 @@ void get_instruct(char *instruct, stack_t **stack, unsigned int index_line)
 			return;
 		}
 	}
-	dprintf(STDOUT_FILENO, "L%u: unknown instruction %s\n", index_line, instruct);
+	dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", index_line, instruct);
 	exit(EXIT_FAILURE);
 }
