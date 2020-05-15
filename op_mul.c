@@ -15,10 +15,8 @@ void op_mul(stack_t **stack, unsigned int index_line)
 	len = list_len(stack);
 	if (len < 2 || stack == NULL || *stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n",
-			line_number);
-		gvars.ret_val = -1;
-		return;
+		fprintf(stderr, "L%d: can't mul, stack too short\n", index_line);
+		exit(EXIT_FAILURE);
 	}
 	else
 	{
