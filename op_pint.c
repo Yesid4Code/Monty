@@ -13,7 +13,7 @@ void op_pint(stack_t **stack, unsigned int index_line)
 
 	if (head == NULL)
 	{
-		dprintf(STDOUT_FILENO, "L%u: can't pint, stack empty\n", index_line);
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n", index_line);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", head->n);
