@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
 		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	on_exit(free_phrase, &phrase);
+	on_exit(free_stack, &stack);
+	on_exit(close_file, fp);
 	while (getline(&phrase, &n, fp) != -1)
 	{
 		index_line++;
@@ -35,9 +38,6 @@ int main(int argc, char *argv[])
 			get_instruct(instruct, &stack, index_line);
 		}
 	}
-	on_exit(free_phrase, &phrase);
-	on_exit(free_stack, &stack);
-	on_exit(close_file, fp);
 	/*free(phrase);*/
 	/*free_list(stack);*/
 	/*fclose(fp);*/

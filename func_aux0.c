@@ -52,14 +52,14 @@ int _isdigit(char *num)
 /**
  * free_stack - frees node
  * @status: exit status
- * @stack: pointer to first node
+ * @arg: pointer to first node
  */
-void free_stack(int status, void *stack)
+void free_stack(int status, void *arg)
 {
 	stack_t **tmp, *aux;
 
 	(void)status;
-	tmp = (stack_t **)stack;
+	tmp = (stack_t **)arg;
 	while (*tmp)
 	{
 		aux = (*tmp)->next;
