@@ -16,7 +16,7 @@ void op_swap(stack_t **stack, unsigned int index_line)
 
 	if (len < 2 || stack == NULL || *stack == NULL)
 	{
-		fprintf(stdout, "L%u: can't swap, stack too short\n", index_line);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", index_line);
 		exit(EXIT_FAILURE);
 	}
 	else
