@@ -18,7 +18,7 @@ void op_pchar(stack_t **stack, unsigned int index_line)
 		printf("%c\n", (*stack)->n);
 	else
 	{
-		fprintf(stdout, "L%d: can't pchar, value out of range\n", index_line);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", index_line);
 		exit(EXIT_FAILURE);
 	}
 }
