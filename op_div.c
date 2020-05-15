@@ -10,7 +10,7 @@ void op_div(stack_t **stack, unsigned int index)
 	stack_t *head = *stack;
 	int count = 0, n1 = 0, n2 = 0;
 
-    count = list_len(stack);
+	count = list_len(stack);
 	if (count < 2)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't div, stack too short\n", index);

@@ -3,7 +3,7 @@
 /**
  * op_pchar - function to print the char value at the top of a stack
  * @stack: double pointer of stack_t type to head of stack
- * @line_number: unsigned int for line number
+ * @index_line: unsigned int for line number
  * Return: print the value at the first element of stack
  */
 void op_pchar(stack_t **stack, unsigned int index_line)
